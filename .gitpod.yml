@@ -1,0 +1,9 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Install dependencies and build
+    command: |
+      chmod +x ARDroneSDK/ARDroneLib/Soft/Build/check_dependencies.sh
+      ./ARDroneSDK/ARDroneLib/Soft/Build/check_dependencies.sh
+      make -C ARDroneSDK/Examples/Linux
